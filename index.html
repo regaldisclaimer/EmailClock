@@ -59,7 +59,7 @@ Contact: regaldisclaimer@gmail.com for all usage permissions -->
 					<i>NEW:</i> Want <b>text messages</b> instead of emails? No Problem! (US only)
 			</p>
 			<div>
-				<input id='textInput' placeholder='Phone Number (e.g. 3392201182)'></input>
+				<input id='textInput' placeholder='10-digit Phone Number (e.g. 3392201182)'></input>
 				<input id='textStart' type='submit' value='Start the TextClock!' onclick='goToPurchase(true)' />
 			</div>
 
@@ -118,15 +118,6 @@ Contact: regaldisclaimer@gmail.com for all usage permissions -->
 				<p>The base service rate is $1 per 250 emails. (Now that's a lot of emails!)</p>
 				<p>And $1 per 50 text messages</p>
 				<hr />
-				<label id='hourMinuteLabel' class="switch-light switch-candy" onclick="">
-				  <input type="checkbox" id='hourMinute' checked='checked' onchange='updatePrice()'>
-				  <span id='hourMinuteSpan'>
-				    Frequency:
-				    <span>Every Hour</span>
-				    <span>Every Minute</span>
-				  </span>
-				  <a></a>
-				</label>
 				<div class ='inline' id='carrierSelect' style='display:none;'>
 					<label for='carrierInput'>IMPORTANT: Choose a cell carrier for the phone number</label>
 					<select id='carrierInput'>
@@ -143,6 +134,16 @@ Contact: regaldisclaimer@gmail.com for all usage permissions -->
 						<option>Virgin</option>
 					</select>
 				</div>
+				<label id='hourMinuteLabel' class="switch-light switch-candy" onclick="">
+				  <input type="checkbox" id='hourMinute' checked='checked' onchange='updatePrice()'>
+				  <span id='hourMinuteSpan'>
+				    Frequency:
+				    <span>Every Hour</span>
+				    <span>Every Minute</span>
+				  </span>
+				  <a></a>
+				</label>
+
 				<div class='inline'>
 					<label id='durationlabel' for='durationInput'>Duration:</label>
 					<input id='durationInput' type='number' min='1' value='0' onchange='updatePrice()'>
