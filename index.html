@@ -6,57 +6,284 @@ Contact: regaldisclaimer@gmail.com for all usage permissions -->
 
 
 		<link href='http://fonts.googleapis.com/css?family=Roboto:400,300,700' rel='stylesheet' type='text/css'>
+		<link rel='stylesheet' href='switch.css'>
 		<link rel='stylesheet' type='text/css' href='index.css'> 
 
-		<link rel="apple-touch-icon" href="http://i.imgur.com/hUllheb.png">
-  		<link rel="apple-touch-icon-precomposed" href="http://i.imgur.com/hUllheb.png">
-		<link rel="icon" type="image/png" href="http://i.imgur.com/hUllheb.png">
+		<link rel="apple-touch-icon" href="icons/favicon.png">
+  		<link rel="apple-touch-icon-precomposed" href="icons/favicon.png">
+		<link rel="icon" type="image/png" href="icons/favicon.png">
 
 		<meta name="mobile-web-app-capable" content="yes">
-		<link rel="shortcut icon" sizes="128x128" href="http://i.imgur.com/E6L4vdJ.png">
-		<link rel="shortcut icon" sizes="196x196" href="http://i.imgur.com/DlbRKpk.png">
-		<link rel="shortcut icon" sizes="256x256" href="ttp://i.imgur.com/hUllheb.png">
+		<link rel="shortcut icon" sizes="128x128" href="#">
+		<link rel="shortcut icon" sizes="196x196" href="#">
+		<link rel="shortcut icon" sizes="256x256" href="#">
 
 	</head>
 	
 	<body>
+			<div id='homeGroup'>
+			<div id='titleDiv'>
+				<p id='titleP'>
+					<hr>
+					<img src='icons/favicon.png' id='titleImage'></img>
+					EmailClock<hr>
+				</p>
+					
+			</div>
+			<div id='headline'>
+				<p>
+					
+					EmailClock, the helpful time reminder
+				</p>
+			</div>
+			<div id='subheading'>
+				<p>
+					EmailClock sends you an email every hour to remind you of the current time!
+				</p>
+				<p>
+					Need an email every minute? Not a problem with EmailClock!
+				</p>
+			</div>
+			<br />
+			<br />
+			<div>
 
-		<div id='titleDiv'>
-			<p id='titleP'>
-				<hr>
-				<img src='http://i.imgur.com/hUllheb.png' height='128px' width='128px'></img>
-				EmailClock<hr>
+				<input id='emailInput' type='email' placeholder='email'></input>
+				<input id='startButton' type='submit' value='Start the EmailClock!' onclick='goToPurchase(false)' />
+
+			</div>
+			<p>
+				***
 			</p>
+			<p>
+					<i>NEW:</i> Want <b>text messages</b> instead of emails? No Problem! (US only)
+			</p>
+			<div>
+				<input id='textInput' placeholder='Phone Number (e.g. 3392201182)'></input>
+				<input id='textStart' type='submit' value='Start the TextClock!' onclick='goToPurchase(true)' />
+			</div>
+
+			<div class='warning'>
+				<p>
+					NB: Only use your own email address/phone number! Using someone else's address is strictly prohibited, and the recipient will be very annoyed!
+				</p>
+				<p>
+					By clicking the button above, you agree to our <a href='#ToS'>Terms of Service</a>
+				</p>
+			</div>
+			<hr />
+			<div id='inter'>
 				
-		</div>
-		<div id='headline'>
-			<p>
+				<p id='interP'><a href='http://regaldisclaimer.com'>A Regal Disclaimer Production</a></p>
+				<p>Copyright (c) Regal Disclaimer All Rights Reserved</p>
+			</div>	
+			<hr />
+			<div id='ToS'>
 				
-				EmailClock, the helpful time reminder
-			</p>
+				<p>Terms of Service:</p>
+				<p>
+					By using this service, you agree to use the software only as intended, and for personal use. For commercial usage is premitted only within the original intention of this application of personal time reminders via email.
+				</p>
+				<p>
+					You further certify that information you provide, including but not limited to your email and purchase details, and you are solely responsible for damages incurred by the usage of this application.
+				</p>
+				<p>
+					You agree to the charges precribed on the website for the services provided, and by submitting of payment information you agree for appropriate charges to be applied to the payment information provided, at any time after the submission of the information. Delay in charges incurred due to the service may occur on heavy traffic, and does not constitute changes on the payment due. 
+				</p>
+				<p>
+					The paid services will start in effect upon successful completion of payment, which may be delayed due to unforeseen circumstances. Timely start of services upon payment information submission cannot be guaranteed, only the duration of the entire service. Once the service is initiated, it cannot be stopped, and has to complete to its full duration. Consequently, refunds for services cannot be arranged. Withdrawal or cancelling the payments without permission will open a case of unpaid balance. The user will be notified via email originally supplied, and the user has 168 hours to resolve the payment due before late fees are incurred. Initial late inconvenience fee is 20% of the total amount due, and 1% of total amount due will be applied monthly afterwards as further late fees, which compounds monthly. The service holds the right to report to credit report agencies on the late payments as deemed necessary.
+				</p>
+				<p>
+					In the case of heavy usage, the application may be at capacity for services, upon which case, it will display a warning for new potential users, that the will be put on a waitlist. New services on the waitlist cannto be started, even upon successful payment, until the application is able to take on more load due to the completion of previous services. The services will be started from the waitlist in the order it was received, and services will be added to waitlists only after successful completion of payment.
+				</p>
+				<p>
+					Successful and timely receipt of email is not guaranteed. Emails will be sent on time, but your email service provider may hinder with the timely delivery of emails. Failure to receive emails promptly due to spam filters, poor internet connection, latency, hindrance from email service provider, and problems with email client are not grounds for claim or refunds.
+				</p>
+				<p>
+					This software and service is provied as is, and Regal Disclaimer and the associated do not hold liability of any possible damages or claims associated with this software and/or service.
+				</p>
+			</div>
 		</div>
-		<div id='subheading'>
-			<p>
-				EmailClock sends you an email every minute, remind you of the current time!
-			</p>
-		</div>
-		<br />
-		<br />
-		<div>
+		<div id='purchaseGroup' style='display:none;'>
+			<hr />
+			<div id='pHeadline'>
+				<p></p>
+			</div>
+			<hr />
+			<div id='Options'>
 
-			<input id='emailInput' type='email' placeholder='email'></input>
-			<input id='startButton'type='submit' value='Start the Clock!' />
+			</div>
+			<div id='selectPlan'>
+				<p>Customize the details of your plan!</p>
+				<p>The base service rate is $1 per 250 emails. (Now that's a lot of emails!)</p>
+				<p>And $1 per 50 text messages</p>
+				<hr />
+				<label id='hourMinuteLabel' class="switch-light switch-candy" onclick="">
+				  <input type="checkbox" id='hourMinute' checked='checked' onchange='updatePrice()'>
+				  <span id='hourMinuteSpan'>
+				    Frequency:
+				    <span>Every Hour</span>
+				    <span>Every Minute</span>
+				  </span>
+				  <a></a>
+				</label>
+				<div class='inline'>
+					<label id='durationlabel' for='durationInput'>Duration:</label>
+					<input id='durationInput' type='number' min='1' value='0' onchange='updatePrice()'>
+				</div>
+				<div class='inline'>				
+					<label id='dayMonthLabel' class="switch-light switch-candy" onclick="">
+					  <input type="checkbox" id='dayMonth' checked='checked' onchange='updatePrice()'>
+					  <span id='dayMonthSpan'>
+					  	<!-- Units -->
+					    <span>days</span>
+					    <span>months</span>
+					  </span>
+					  <a></a>
+					</label>
+				</div>
+				<hr />
+			</div>
+			<div id='planSummary'>
+				<p></p>
+			</div>
+			<div id='baseRate'>
+				<p></p>
+			</div>
+			<hr />
+			<div>
+				<input id='checkOutButton' type='submit' value='Check Out! (Make sure all the info is correct!)' onclick='checkOut()'>
+			</div>
+			<div id='credit'>
+				<div id='stripeScr'></div>
+			</div>
 
-		</div>
 
 
-		<div id='warning'>
-			<p>
-				NB: Only use your own email address! Using someone else's address is strictly prohibited, and the recipient will be very annoyed!
-			</p>
-		</div>
 		<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-54ad6bc83a3bc1fd" async="async"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 	</body>
 	<script>
+	
+	//
+	console.log(window.location.href);
+
+
+	//
+
+	var emailAddr;
+	//
+	var isMinute;	//on or false
+	var isMonths;	//on or false
+	var durationVar;
+	var numEmails;
+	var amountVar;
+	var descriptionVar;
+
+	var isText;
+	var cellCarrier = 'Verizon';
+
+
+	function updatePrice(){
+		$(document).ready(function(){
+			isMinute = ($('#hourMinute:checked').val() || false);
+			isMonths = ($('#dayMonth:checked').val() || false);
+			durationVar = +($('#durationInput').val());
+
+			//on or false, these fellas.
+			if (isMinute===false){
+				//hourly
+				if(isMonths===false){
+					//days
+					numEmails = 24*durationVar;
+				} else {
+					//months
+					numEmails = 730*durationVar;
+				}
+			} else {
+				//every minute
+				if(isMonths===false){
+					//days
+					numEmails = 1440*durationVar;
+				} else {
+					//months
+					numEmails = 43800*durationVar;
+				}
+			}
+
+			if (isText){
+				var text = 'A total of '+numEmails+' text messages will be sent during this plan!';
+			} else {
+				var text = 'A total of '+numEmails+' emails will be sent during this plan!';
+			}
+			$('#planSummary p').text(text);
+
+			if(isText) {
+				amountVar = (numEmails/50);
+			} else {
+				amountVar = (numEmails/250);
+			}
+			var text2 = 'The price at the base rate for this plan is: $'+amountVar;
+			$('#baseRate>p').text(text2);
+		});
+	}
+
+
+	function checkOut() {
+		//check for minimum purchase price of $5
+		if (amountVar<5){
+			//does not meet plan minimum
+			$(document).ready(function(){
+				$('#baseRate').append("<div class='warning'><p>Please note: Minimum plan size is $5!</p></div>");
+			});
+			
+		} else {
+
+			var destination = "https://emailclock.herokuapp.com/payment?"
+			destination = destination+"isText="+isText;
+			destination = description+"&carrier="+cellCarrier;
+			destination = destination+"&email="+emailAddr;
+			destination = destination+"&minute="+isMinute;
+			destination = destination+"&months="+isMonths;
+			destination = destination+"&duration="+durationVar;
+
+			console.log(destination);
+
+			//send user to payment page
+			//https://emailclock.herokuapps.com/payment/PLANQUERYDETAILHERE_AND EMAIL
+		}
+	}
+
+
+
+	//
+
+	function goToPurchase(textBool){
+		isText = textBool;
+		if (!isText) {
+			$(document).ready(function(){
+				emailAddr = $('#emailInput').val();
+				var emailText = 'Choose your EmailClock plan for: '+emailAddr;
+				$('#pHeadline p').text(emailText);
+				$('#homeGroup').toggle(1000);
+				$('#purchaseGroup').toggle(1000);
+			});
+		} else {
+			$(document).ready(function(){
+				emailAddr = $('#textInput').val();
+				var emailText = 'Choose your EmailClock plan for: '+emailAddr;
+				$('#pHeadline p').text(emailText);
+				$('#homeGroup').toggle(1000);
+				$('#purchaseGroup').toggle(1000);
+			});
+		}
+	}
+
+
+
+
+
+
+
 	</script>
 </html>
