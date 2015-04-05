@@ -127,6 +127,22 @@ Contact: regaldisclaimer@gmail.com for all usage permissions -->
 				  </span>
 				  <a></a>
 				</label>
+				<div class ='inline' style='display:none;'>
+					<label for='carrierInput'>IMPORTANT: Choose a cell carrier for the phone number</label>
+					<select id='carrierInput'>
+						<option>ACS Wireless</option>
+						<option>Alltel</option>
+						<option>AT&T</option>
+						<option>Boost Mobile</option>
+						<option>Comcast</option>
+						<option>Metro PCS</option>
+						<option>Sprint</option>
+						<option>T-Mobile</option>
+						<option>US Cellular</option>
+						<option>Verizon</option>
+						<option>Virgin</option>
+					</select>
+				</div>
 				<div class='inline'>
 					<label id='durationlabel' for='durationInput'>Duration:</label>
 					<input id='durationInput' type='number' min='1' value='0' onchange='updatePrice()'>
@@ -238,6 +254,23 @@ Contact: regaldisclaimer@gmail.com for all usage permissions -->
 			});
 			
 		} else {
+
+			var carrierCode = {
+                "ACS Wireless": "ACS",
+                "Alltel": "Alltel",
+                "AT&T": "ATT",
+                "Boost Mobile": "Boost",
+                "Comcast": "Comcast",
+                "Metro PCS": "MetroPCS",
+                "Sprint": "Sprint",
+                "T-Mobile": "TMobile",
+                "US Cellular": "USCellular",
+                "Verizon": "Verizon",
+                "Virgin": "Virgin"
+            }
+
+            carrierResponse = $('#carrierInput').val();
+            cellCarrier = carrierCode[carrierResponse];
 
 			var destination = "https://emailclock.herokuapp.com/payment?"
 			destination = destination+"isText="+isText;
