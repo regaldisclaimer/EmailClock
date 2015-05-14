@@ -56,10 +56,10 @@ Contact: regaldisclaimer@gmail.com for all usage permissions -->
 				***
 			</p>
 			<p>
-					<i>NEW:</i> Want <b>text messages</b> instead of emails? No Problem! (US only)
+				<i>NEW:</i> Want <b>text messages</b> instead of emails? No Problem! (US only)
 			</p>
 			<div>
-				<input id='textInput' placeholder='10-digit Phone Number (e.g. 3392201182)'></input>
+				<input id='textInput' placeholder='Full Phone Number (e.g. 13392201182)'></input>
 				<input id='textStart' type='submit' value='Start the TextClock!' onclick='goToPurchase(true)' />
 			</div>
 
@@ -301,7 +301,15 @@ Contact: regaldisclaimer@gmail.com for all usage permissions -->
 			});
 		} else {
 			$(document).ready(function(){
-				emailAddr = $('#textInput').val();
+				emailAddr = $('#textInput').val().split('-').join('');
+				if (emailAddr.length == 11) {
+					//correct length
+				} else if (emailAddr.length == 10) {
+					emailAddr = "1"+emailAddr;
+				} else {
+					alert('Invalid Phone Number');
+					return;
+				}
 				var emailText = 'Choose your EmailClock plan for: '+emailAddr;
 				$('#pHeadline p').text(emailText);
 				$('#homeGroup').toggle(1000);
