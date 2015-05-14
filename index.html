@@ -45,21 +45,27 @@ Contact: regaldisclaimer@gmail.com for all usage permissions -->
 				</p>
 			</div>
 			<br />
-			<br />
 			<div>
 
 				<input id='emailInput' type='email' placeholder='email'></input>
 				<input id='startButton' type='submit' value='Start the EmailClock!' onclick='goToPurchase(false)' />
 
 			</div>
+			<br />
+			<br />
 			<p>
 				***
 			</p>
+			<br />
+			<hr />
 			<p>
-				<i>NEW:</i> Want <b>text messages</b> instead of emails? No Problem! (US only)
+				<i>*Experimental*:</i> Send <b>text messages</b> instead of emails! (Select US carriers only)
+			</p>
+			<p>
+				This is an experimental feature, and delivery is not guaranteed until further verification tests are conducted.
 			</p>
 			<div>
-				<input id='textInput' placeholder='10-digit Phone Number (e.g. 339-220-1182)'></input>
+				<input id='textInput' placeholder='10-digit Number (e.g. 339-220-1182)'></input>
 				<input id='textStart' type='submit' value='Start the TextClock!' onclick='goToPurchase(true)' />
 			</div>
 
@@ -75,7 +81,7 @@ Contact: regaldisclaimer@gmail.com for all usage permissions -->
 			<div id='inter'>
 				
 				<p id='interP'><a href='http://regaldisclaimer.com'>A Regal Disclaimer Production</a></p>
-				<p>Copyright (c) Regal Disclaimer All Rights Reserved</p>
+				<p><span class="creditSpan">Copyright (c)</span>	<span class="creditSpan">Regal Disclaimer</span>	<span class="creditSpan">All Rights Reserved</span></p>
 			</div>	
 			<hr />
 			<div id='ToS'>
@@ -303,9 +309,9 @@ Contact: regaldisclaimer@gmail.com for all usage permissions -->
 			$(document).ready(function(){
 				emailAddr = $('#textInput').val().split('-').join('');
 				if (emailAddr.length == 11) {
-					//correct length
+					emailAddr = emailAddr.substring(1);
 				} else if (emailAddr.length == 10) {
-					emailAddr = "1"+emailAddr;
+					//normal
 				} else {
 					alert('Invalid Phone Number');
 					return;
